@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package cosmos.crypto.mldsa;
+
+import "amino/amino.proto";
+
+option go_package = "github.com/wajeehamalik913/mldsa-module/crypto/keys/mldsa";
+
+// Public Key message
+message PubKey {
+  option (amino.name) = "tendermint/PubKeymldsa";
+  bytes key = 1;
+}
+
+// Private Key message
+message PrivKey {
+  option (amino.name) = "tendermint/PrivKeymldsa";
+  bytes key = 1;
+}
